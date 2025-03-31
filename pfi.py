@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def load_model(name):
     try:
-        return pickle.load(open(f'C:\\Users\\Aniket\\TelcoChurn\\{name}_model.pkl', 'rb'))
+        return pickle.load(open(f'{name}_model.pkl', 'rb'))
     except Exception as e:
         st.error(f"Error loading model: {e}")
         return None
