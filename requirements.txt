@@ -163,7 +163,6 @@ streamlit-lottie==0.0.5
 sympy==1.13.2
 tenacity==9.0.0
 tensorboard==2.17.1
-tensorboard-data-server==0.7.2
 tensorflow==2.17.0
 tensorflow-intel==2.17.0
 tensorflow-io-gcs-filesystem==0.31.0
@@ -197,8 +196,5 @@ wrapt==1.16.0
 xxhash==3.5.0
 yarl==1.11.1
 yfinance==0.2.44
-setuptools>=65.5.0
-wheel>=0.38.0
-streamlit
-rich>=10.14.0
-# Add your other dependencies here
+setuptools==65.5.0
+wheel==0.38.0
