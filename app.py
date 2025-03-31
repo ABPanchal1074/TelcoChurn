@@ -202,7 +202,7 @@ elif menu == "🔑 PFI":
     
     try:
         # Load the dataset (keeping your path)
-        data = pd.read_csv(r'C:\Users\Aniket\TelcoChurn\preprocessed_data.csv')
+        data = pd.read_csv('preprocessed_data.csv')
         X = data.drop('Churn', axis=1)
         y = data['Churn']
 
