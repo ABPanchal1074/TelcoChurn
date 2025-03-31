@@ -170,7 +170,7 @@ model_names = ['logistic_regression', 'decision_tree', 'random_forest', 'gradien
 
 for name in model_names:
     try:
-        models[name] = pickle.load(open(f'C:\\Users\\Aniket\\TelcoChurn\\{name}_model.pkl', 'rb'))
+        models[name] = pickle.load(open(f'{name}_model.pkl', 'rb'))
         st.sidebar.success(f'{name.replace("_", " ").title()} model loaded successfully.')
     except FileNotFoundError:
         st.sidebar.error(f'Model file for {name.replace("_", " ").title()} not found.')
@@ -369,7 +369,7 @@ elif menu == "🏠 Home":
                         'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport', 'StreamingTV', 
                         'StreamingMovies', 'Contract', 'PaperlessBilling', 'PaymentMethod']
         data = pd.get_dummies(data, columns=categorical_cols)
-        original_cols = pd.read_csv(r'C:\Users\Aniket\TelcoChurn\preprocessed_data.csv').drop('Churn', axis=1).columns
+        original_cols = pd.read_csv(r'preprocessed_data.csv').drop('Churn', axis=1).columns
         data = data.reindex(columns=original_cols, fill_value=0)
         return data
 
