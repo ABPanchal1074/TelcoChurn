@@ -4,13 +4,13 @@ import pandas as pd
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 def load_model(name):
-    return pickle.load(open(f'C:\\Users\\Aniket\\TelcoChurn\\{name}_model.pkl', 'rb'))
+    return pickle.load(open(f'{name}_model.pkl', 'rb'))
 
 def model_comparison():
     st.title("📊 Model Comparison Dashboard")
 
     model_names = ['logistic_regression', 'decision_tree', 'random_forest', 'gradient_boosting', 'k-nearest_neighbors']
-    data = pd.read_csv(r'C:\Users\Aniket\TelcoChurn\preprocessed_data.csv')
+    data = pd.read_csv(r'preprocessed_data.csv')
 
     X = data.drop(['Churn'], axis=1)
     y = data['Churn']
